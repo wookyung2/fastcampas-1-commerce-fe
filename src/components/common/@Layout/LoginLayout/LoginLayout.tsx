@@ -15,7 +15,7 @@ const LoginLayout = ({
 }: LoginLayoutProps) => {
   return (
     <>
-      <Container {...containerProps} border="1px solid red">
+      <Container {...containerProps} pr="0px" pl="0px">
         {content}
       </Container>
     </>

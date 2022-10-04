@@ -28,6 +28,9 @@ export const MY_IMAGES = {
       CART: { src: '/images/header/cart.png', alt: 'cart' },
       LOGOUT: { src: '/images/header/logout.png', alt: 'logout' },
     },
+    main: {
+      LOGO: { src: '/images/main/logo.png', alt: 'logo' },
+    },
   },
   VERCEL: { src: '/vercel.svg', alt: 'vercel' },
 };
