@@ -43,29 +43,20 @@ const accessibleColorMap: { [key: string]: AccessibleColor } = {
   },
 };
 
-const variantSolid: StyleObjectOrFn = (props) => {
-  const { colorScheme: c } = props;
+const buttonDisabled = {
+  opacity: 1,
+  bg: 'gray.400',
+  borderColor: 'gray.400',
+  color: 'white',
+};
 
-  if (c === 'gray') {
-    const bg = 'gray.100';
-    return {
-      bg,
-      _hover: {
-        bg: 'gray.100',
-        _disabled: {
-          bg,
-        },
-      },
-      _active: { bg: 'gray.300' },
-    };
-  }
-
+const variantGray: StyleObjectOrFn = ({ colorScheme: c }) => {
   const {
-    bg = `${c}.500`,
+    bg = 'gray.400',
     color = 'white',
-    hoverBg = `${c}.600`,
-    activeBg = `${c}.700`,
-    border = `${c}.500`,
+    hoverBg = 'gray.500',
+    activeBg = 'gray.600',
+    border = 'gray.400',
   } = accessibleColorMap[c] ?? {};
 
   const background = bg;
@@ -76,14 +67,93 @@ const variantSolid: StyleObjectOrFn = (props) => {
     color: color,
     borderWidth: 1,
     borderColor: borderColor,
+    _disabled: buttonDisabled,
     _hover: {
       bg: hoverBg,
-      borderColor: hoverBg,
-      _disabled: {
-        bg: background,
-      },
+      borderColor: 'gray.500',
+      _disabled: buttonDisabled,
     },
-    _active: { bg: activeBg, borderColor: activeBg },
+    _active: { bg: activeBg, borderColor: 'gray.500' },
+  };
+};
+const variantGrayOutline: StyleObjectOrFn = ({ colorScheme: c }) => {
+  const {
+    bg = 'white',
+    color = 'gray.500',
+    hoverBg = 'white',
+    activeBg = 'white',
+    border = 'gray.500',
+  } = accessibleColorMap[c] ?? {};
+
+  const background = bg;
+  const borderColor = border;
+
+  return {
+    bg: background,
+    color: color,
+    borderWidth: 1,
+    borderColor: borderColor,
+    _disabled: buttonDisabled,
+    _hover: {
+      bg: hoverBg,
+      borderColor: 'gray.300',
+      _disabled: buttonDisabled,
+    },
+    _active: { bg: activeBg, borderColor: 'gray.300' },
+  };
+};
+
+const variantOutline: StyleObjectOrFn = ({ colorScheme: c }) => {
+  const {
+    bg = 'white',
+    color = 'primary.500',
+    hoverBg = 'white',
+    activeBg = 'white',
+    border = 'primary.500',
+  } = accessibleColorMap[c] ?? {};
+
+  const background = bg;
+  const borderColor = border;
+
+  return {
+    bg: background,
+    color: color,
+    borderWidth: 1,
+    borderColor: borderColor,
+    _disabled: buttonDisabled,
+    _hover: {
+      bg: hoverBg,
+      borderColor: 'primary.300',
+      _disabled: buttonDisabled,
+    },
+    _active: { bg: activeBg, borderColor: 'primary.300' },
+  };
+};
+
+const variantSolid: StyleObjectOrFn = ({ colorScheme: c }) => {
+  const {
+    bg = 'primary.500',
+    color = 'white',
+    hoverBg = 'primary.400',
+    activeBg = 'primary.400',
+    border = 'primary.500',
+  } = accessibleColorMap[c] ?? {};
+
+  const background = bg;
+  const borderColor = border;
+
+  return {
+    bg: background,
+    color: color,
+    borderWidth: 1,
+    borderColor: borderColor,
+    _disabled: buttonDisabled,
+    _hover: {
+      bg: hoverBg,
+      borderColor: 'primary.400',
+      _disabled: buttonDisabled,
+    },
+    _active: { bg: activeBg, borderColor: 'primary.400' },
   };
 };
 
@@ -93,29 +163,32 @@ export const Button: ComponentSingleStyleConfig = {
     h: 'fit-content',
     _focus: { boxShadow: 'none' },
   },
+  defaultProps: {
+    variant: 'primary',
+    size: 'lg',
+  },
   variants: {
-    solid: variantSolid,
+    primary: variantSolid,
+    outline: variantOutline,
+    gray: variantGray,
+    grayOutline: variantGrayOutline,
   },
   sizes: {
     lg: {
+      maxW: '372px',
+      w: '100%',
       h: '50px',
-      fontSize: ['16px', '14px', '15px'],
-      px: '15px',
+      fontSize: ['16px'],
+      lineHeight: ['28px'],
+      fontWeight: ['bold'],
     },
     md: {
-      h: '40px',
-      fontSize: ['12px', '10px', '12px'],
-      px: '15px',
-    },
-    sm: {
-      h: '30px',
-      fontSize: ['12px', '10px', '12px'],
-      px: '15px',
-    },
-    xs: {
-      h: '26px',
-      fontSize: ['12px', '10px', '12px'],
-      px: '8px',
+      maxW: '372px',
+      w: '100%',
+      h: '50px',
+      fontSize: ['12px'],
+      lineHeight: ['18px'],
+      fontWeight: ['bold'],
     },
   },
 };

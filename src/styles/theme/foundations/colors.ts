@@ -1,15 +1,16 @@
 import { getColorSchema } from '@utils/color-generator';
 
 const Light = {
+  primary: getColorSchema('#FF710B'),
   warning: getColorSchema('#FF6060'),
   warningSub: getColorSchema(`#FFE3E6`),
   success: getColorSchema('#FF710B'),
   successSub: getColorSchema(`#CFE8FF`),
   point: getColorSchema(`#FFAB2E`),
-  primary: {
-    100: '#ffe8d7',
-    500: '#FF710B',
-  },
+  // primary: {
+  //   100: '#ffe8d7',
+  //   500: '#FF710B',
+  // },
   secondary: {
     100: '#FFF3E0',
     500: '#FFAB2E',
