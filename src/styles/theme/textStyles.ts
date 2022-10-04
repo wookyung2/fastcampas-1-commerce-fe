@@ -2,6 +2,7 @@ const textStyles = {
   extraLarge: {
     fontSize: ['26px'],
     lineHeight: ['38px'],
+    fontWeight: ['bold'],
   },
   titleLarge: {
     fontSize: ['20px'],

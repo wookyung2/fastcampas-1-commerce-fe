@@ -55,13 +55,26 @@ const FormHelper = ({
   return (
     <FormControl isInvalid={!!errorText} {...basisProps}>
       {!!label && (
-        <FormLabel fontWeight="bold" mb="20px" {...labelProps}>
+        <FormLabel
+          fontSize="12px"
+          fontWeight="bold"
+          color="primary.500"
+          mb="10px"
+          {...labelProps}
+        >
           {label}
         </FormLabel>
       )}
       {children}
       {isShowErrorText && (
-        <FormErrorMessage {...errorTextProps}>{errorText}</FormErrorMessage>
+        <FormErrorMessage
+          fontSize="12px"
+          fontWeight="bold"
+          color="warning.500"
+          {...errorTextProps}
+        >
+          {errorText}
+        </FormErrorMessage>
       )}
       {isShowSuccessText && (
         <FormHelperText color="custom.primary" {...successTextProps}>

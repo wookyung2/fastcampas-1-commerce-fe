@@ -30,6 +30,8 @@ export const MY_IMAGES = {
     },
     main: {
       LOGO: { src: '/images/main/logo.png', alt: 'logo' },
+      LOGOCO: { src: '/images/main/logoColor.png', alt: 'logoCo' },
+      PROFILE: { src: '/images/main/profile.png', alt: 'profile' },
     },
   },
   VERCEL: { src: '/vercel.svg', alt: 'vercel' },
