@@ -1,9 +1,9 @@
 import { createBreakpoints } from '@chakra-ui/theme-tools';
 
 export const mediaSize = {
-  // base <780px
+  // base <375px
   base: '0px',
-  sm: '780px', // ≥780px
+  sm: '375px', // ≥375px
   md: '980px', // ≥980px
   lg: '1280px', // ≥1280px
   xl: '1480px', // ≥1480px

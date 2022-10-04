@@ -1,19 +1,59 @@
 const textStyles = {
-  sm: {
-    fontSize: ['12px', '10px', '12px'],
-    lineHeight: ['18px', '16px', '18px'],
+  extraLarge: {
+    fontSize: ['26px'],
+    lineHeight: ['38px'],
   },
-  md: {
-    fontSize: { base: '16px', sm: '14px', md: '15px' },
-    lineHeight: ['28px', '26px', '27px'],
+  titleLarge: {
+    fontSize: ['20px'],
+    lineHeight: ['29px'],
+    fontWeight: ['bold'],
   },
-  lg: {
-    fontSize: ['20px', '20px', '26px'],
-    lineHeight: ['29px', '29px', '42px'],
+  title: {
+    fontSize: ['16px'],
+    lineHeight: ['28px'],
+    fontWeight: ['bold'],
   },
-  xl: {
-    fontSize: ['26px', '26px', '35px'],
-    lineHeight: ['38px', '38px', '52px'],
+  titleSmall: {
+    fontSize: ['12px'],
+    lineHeight: ['18px'],
+    fontWeight: ['bold'],
+  },
+  textLarge: {
+    fontSize: ['20px'],
+    lineHeight: ['29px'],
+    fontWeight: ['regular'],
+  },
+  text: {
+    fontSize: ['16px'],
+    lineHeight: ['28px'],
+    fontWeight: ['regular'],
+  },
+  textSmall: {
+    fontSize: ['12px'],
+    lineHeight: ['18px'],
+    fontWeight: ['regular'],
+  },
+  button: {
+    fontSize: ['16px'],
+    lineHeight: ['28px'],
+    fontWeight: ['bold'],
+  },
+  buttonSmall: {
+    fontSize: ['12px'],
+    lineHeight: ['18px'],
+    fontWeight: ['bold'],
+  },
+  textActive: {
+    fontSize: ['16px'],
+    lineHeight: ['28px'],
+    fontWeight: ['regular'],
+    textDecoration: ['underline'],
+  },
+  textSmallActive: {
+    fontSize: ['12px'],
+    lineHeight: ['18px'],
+    fontWeight: ['regular'],
+    textDecoration: ['underline'],
   },
 };
 

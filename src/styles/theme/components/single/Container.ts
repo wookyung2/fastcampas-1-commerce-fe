@@ -2,7 +2,9 @@ import { ComponentSingleStyleConfig } from '@chakra-ui/theme';
 
 export const Container: ComponentSingleStyleConfig = {
   baseStyle: {
-    maxW: ['100%', '780px', '980px', '1280px', '1480px', '1780px'],
+    maxW: ['100%', '375px'],
+    pr: '16px',
+    pl: '16px',
   },
   defaultProps: {},
   sizes: {},
