@@ -1,6 +1,8 @@
 import { ComponentSingleStyleConfig } from '@chakra-ui/react';
 import { StyleObjectOrFn } from '@chakra-ui/styled-system';
 
+import { defaultValues } from './../../../../components/Register/_hooks/useUserForm';
+
 type AccessibleColor = {
   bg?: string;
   color?: string;
@@ -131,12 +133,25 @@ const variantOutline: StyleObjectOrFn = ({ colorScheme: c }) => {
 };
 
 const variantSolid: StyleObjectOrFn = ({ colorScheme: c }) => {
+  if (c === 'gray') {
+    const bg = 'gray.100';
+    return {
+      bg,
+      _hover: {
+        bg: 'gray.100',
+        _disabled: {
+          bg,
+        },
+      },
+      _active: { bg: 'gray.300' },
+    };
+  }
   const {
-    bg = 'primary.500',
+    bg = `${c}.500`,
     color = 'white',
-    hoverBg = 'primary.400',
-    activeBg = 'primary.400',
-    border = 'primary.500',
+    hoverBg = `${c}.400`,
+    activeBg = `${c}.400`,
+    border = `${c}.500`,
   } = accessibleColorMap[c] ?? {};
 
   const background = bg;
@@ -150,10 +165,10 @@ const variantSolid: StyleObjectOrFn = ({ colorScheme: c }) => {
     _disabled: buttonDisabled,
     _hover: {
       bg: hoverBg,
-      borderColor: 'primary.400',
+      borderColor: hoverBg,
       _disabled: buttonDisabled,
     },
-    _active: { bg: activeBg, borderColor: 'primary.400' },
+    _active: { bg: activeBg, borderColor: activeBg },
   };
 };
 

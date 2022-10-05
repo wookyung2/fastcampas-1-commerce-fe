@@ -38,8 +38,8 @@ const HomeHeaderDrawer = ({
           <DrawerCloseButton //
             w="40px"
             h="40px"
-            top="20px"
-            right={{ base: '16px', md: '80px' }}
+            top="28px"
+            mr="20px"
             onClick={basisProps.onClose}
           />
           <DrawerHeader textStyle="titleLarge" p="80px 16px 46px 16px">
@@ -62,7 +62,7 @@ const HomeHeaderDrawer = ({
           ))}
         </DrawerBody>
 
-        <Button pb="25px">
+        <Button pb="25px" ml="16px">
           <Image {...MY_IMAGES.IMAGES.header.LOGOUT} />
           <Text textStyle="titleLarge">로그아웃</Text>
         </Button>

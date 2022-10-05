@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Container, ContainerProps } from '@chakra-ui/react';
+import { MY_IMAGES } from '@image';
+
+import { Container, ContainerProps, Image } from '@chakra-ui/react';
 
 import { LAYOUT } from '@constants/layout';
 
@@ -23,7 +25,14 @@ const HomeLayout = ({
   return (
     <>
       {header}
-      <Container pt={LAYOUT.HEADER.HEIGHT} {...containerProps}>
+      <Container px="0px" pt={LAYOUT.HEADER.HEIGHT} {...containerProps}>
+        <Image
+          mt="-160px"
+          {...MY_IMAGES.IMAGES.main.BACKGROUND}
+          w="375px"
+          h="782px"
+        />
+
         {content}
       </Container>
       {footer}
