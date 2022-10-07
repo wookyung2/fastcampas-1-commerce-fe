@@ -4,7 +4,16 @@ import { MY_IMAGES } from '@image';
 
 import { Box, BoxProps, Button, Flex, Image, Text } from '@chakra-ui/react';
 
+import Section1 from './_fragments/Section1';
+import Section2 from './_fragments/Section2';
+
 interface HomePageContentProps extends BoxProps {}
+
+const PRODUCT = [
+  { image: '/images/main/cosmetic.png', text: '바스&샴푸' },
+  { image: '/images/main/cosmetic.png', text: '오일' },
+  { image: '/images/main/cosmetic.png', text: '파우더로션' },
+];
 
 function HomePageContent({ ...basisProps }: HomePageContentProps) {
   return (
@@ -43,24 +52,19 @@ function HomePageContent({ ...basisProps }: HomePageContentProps) {
             >
               상품전체보기
             </Button>
-            <Image {...MY_IMAGES.IMAGES.main.COSMETIC} mt="80px" />
-            <Text textStyle="title" mt="10px">
-              바스&샴푸
-            </Text>
-            <Image {...MY_IMAGES.IMAGES.main.COSMETIC} mt="80px" />
-            <Text textStyle="title" mt="10px">
-              오일
-            </Text>
-            <Image {...MY_IMAGES.IMAGES.main.COSMETIC} mt="80px" />
-            <Text textStyle="title" mt="10px">
-              파우더로션
-            </Text>
-          </Flex>
-          <Flex>
-            <Box w="100%"></Box>
+            {PRODUCT.map((item, i) => (
+              <>
+                <Image key={item.image} src={item.image} mt="80px" />
+                <Text key={item.text} textStyle="title" mt="10px">
+                  {item.text}
+                </Text>
+              </>
+            ))}
           </Flex>
         </Box>
       </Flex>
+      <Section1 />
+      <Section2 />
     </>
   );
 }
