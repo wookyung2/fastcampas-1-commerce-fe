@@ -25,7 +25,7 @@ export default function Section2() {
           </Flex>
         </Flex>
         <Flex justify="flex-end" p="12px 16px 20px">
-          <GoUpIcon boxSize="50px" />
+          <GoUpIcon boxSize="50px" onClick={() => window.scrollTo(0, 0)} />
         </Flex>
       </Box>
     </>
