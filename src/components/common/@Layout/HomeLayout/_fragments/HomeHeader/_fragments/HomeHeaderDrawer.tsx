@@ -8,6 +8,7 @@ import {
   ChakraProps,
   DrawerHeader,
   DrawerProps,
+  Flex,
   Image,
   Text,
 } from '@chakra-ui/react';
@@ -62,10 +63,16 @@ const HomeHeaderDrawer = ({
           ))}
         </DrawerBody>
 
-        <Button pb="25px" ml="16px">
+        <Flex pb="25px" pl="16px">
           <Image {...MY_IMAGES.IMAGES.header.LOGOUT} />
-          <Text textStyle="titleLarge">로그아웃</Text>
-        </Button>
+          <Text
+            textStyle="titleLarge"
+            cursor="pointer"
+            onClick={() => console.log('로그아웃')}
+          >
+            로그아웃
+          </Text>
+        </Flex>
       </DrawerContent>
     </Drawer>
   );

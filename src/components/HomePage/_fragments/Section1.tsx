@@ -4,6 +4,9 @@ import { MY_IMAGES } from '@image';
 
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 
+import CallIcon from '@components/common/@Icons/System/Call';
+import CallChatIcon from '@components/common/@Icons/System/CallChat';
+
 import BadgeSlider from './BadgeSlider';
 import ReviewSlider from './ReviewSlider';
 
@@ -29,14 +32,9 @@ export default function Section1() {
         </Flex>
         <BadgeSlider />
         <ReviewSlider />
-        <Image
-          {...MY_IMAGES.IMAGES.main.CALL}
-          pt="30px"
-          pb="20.5px"
-          w="50px"
-          transform="translateX(309px)"
-          onClick={clickCall}
-        />
+        <Flex justify="flex-end" p="30px 16px 20px">
+          <CallChatIcon boxSize="50px" onClick={clickCall} />
+        </Flex>
       </Box>
     </>
   );
