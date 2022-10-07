@@ -4,6 +4,7 @@ import { MY_IMAGES } from '@image';
 
 import { Box, BoxProps, Button, Flex, Image, Text } from '@chakra-ui/react';
 
+import Footer from './_fragments/Footer';
 import Section1 from './_fragments/Section1';
 import Section2 from './_fragments/Section2';
 
@@ -65,6 +66,7 @@ function HomePageContent({ ...basisProps }: HomePageContentProps) {
       </Flex>
       <Section1 />
       <Section2 />
+      <Footer />
     </>
   );
 }
