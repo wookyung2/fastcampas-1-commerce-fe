@@ -36,6 +36,9 @@ export const MY_IMAGES = {
       BG2: { src: '/images/main/bg2.png', alt: 'bg2' },
       COSMETIC: { src: '/images/main/cosmetic.png', alt: 'cosmetic' },
     },
+    card: {
+      CARD: { src: '/images/card/card.png', alt: 'card' },
+    },
   },
   VERCEL: { src: '/vercel.svg', alt: 'vercel' },
 };
