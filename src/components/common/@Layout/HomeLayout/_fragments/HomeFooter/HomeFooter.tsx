@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Box, Flex, SimpleGrid, Stack, Text } from '@chakra-ui/react';
+import { Container, Flex, Stack, Text } from '@chakra-ui/react';
 
 export default function Footer() {
   return (
-    <Box bg="gray.800" pl="16px">
+    <Container bg="gray.800">
       <Flex pt="35px">
         <Text textStyle="title" color="white">
           INCOURSE.RUN
@@ -18,6 +18,6 @@ export default function Footer() {
       <Text textStyle="textSmall" color="white" pt="40px" pb="55px">
         ⓒINCOURSE.RUN All Right Reserved.
       </Text>
-    </Box>
+    </Container>
   );
 }
