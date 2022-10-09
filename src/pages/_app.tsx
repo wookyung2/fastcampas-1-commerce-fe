@@ -7,6 +7,8 @@ import { mode } from '@theme/foundations/colors';
 
 import withAppProvider from 'contexts/app/app.provider';
 import { withGlobalModalHandlerContext } from 'contexts/modal/useGlobalModalHandler.context';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 
 function MyApp({ Component, pageProps }: any) {
   const theme = useTheme();

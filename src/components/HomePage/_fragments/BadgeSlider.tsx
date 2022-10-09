@@ -1,7 +1,6 @@
 import React from 'react';
-import Slider from 'react-slick';
 
-import { Badge, Flex, HStack } from '@chakra-ui/react';
+import { Badge, Box } from '@chakra-ui/react';
 
 const TAG = [
   { title: '바스&샴푸' },
@@ -15,29 +14,14 @@ const TAG = [
   { title: '크림6' },
 ];
 export default function BadgeSlider() {
-  const settings = {
-    infinite: true,
-    slidesToShow: 1,
-    speed: 500,
-    rows: 3,
-    slidesPerRow: 1,
-    swipe: true,
-    draggable: true,
-    autoplay: true,
-    autoplaySpeed: 10000,
-  };
   return (
-    <Slider {...settings}>
-      <HStack>
-        <Flex p="50px 16px 76px" overflow="hidden" w="375px" cursor="pointer">
-          <Badge variant="primary">전체</Badge>
-          {TAG.map((item, i) => (
-            <Badge key={i} variant="gray" ml="10px">
-              {item.title}
-            </Badge>
-          ))}
-        </Flex>
-      </HStack>
-    </Slider>
+    <Box overflowX="scroll" m="50px -16px 75px 0px" whiteSpace="nowrap">
+      <Badge variant="primary">전체</Badge>
+      {TAG.map((item, i) => (
+        <Badge key={i} ml="10px" variant="gray">
+          {item.title}
+        </Badge>
+      ))}
+    </Box>
   );
 }
