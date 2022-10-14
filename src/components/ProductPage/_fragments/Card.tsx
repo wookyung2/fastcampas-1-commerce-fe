@@ -17,15 +17,7 @@ const LIST = [
   },
 ];
 
-export default function Card() {
-  const goPay = () => {
-    alert('준비중입니다.');
-  };
-
-  const goCart = () => {
-    alert('준비중입니다.');
-  };
-
+export default function Card({ goPay, goCart }: any) {
   return (
     <Box
       borderRadius="20px"
