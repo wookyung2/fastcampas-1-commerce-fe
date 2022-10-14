@@ -2,7 +2,7 @@ import React from 'react';
 
 import { MY_IMAGES } from '@image';
 
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Image, Stack, Text } from '@chakra-ui/react';
 
 import StarIcon from '@components/common/@Icons/System/Star';
 
@@ -18,6 +18,14 @@ const LIST = [
 ];
 
 export default function Card() {
+  const goPay = () => {
+    alert('준비중입니다.');
+  };
+
+  const goCart = () => {
+    alert('준비중입니다.');
+  };
+
   return (
     <Box
       borderRadius="20px"
@@ -32,7 +40,7 @@ export default function Card() {
         <Text as="span" textStyle="text" color="gray.700">
           300ml
         </Text>
-        <Box>
+        <Box pt="10px">
           <Text as="span" textStyle="titleLarge" color="primary.500">
             27,000
           </Text>
@@ -47,7 +55,25 @@ export default function Card() {
         <Text as="span" textStyle="text" color="gray.700" pl="3px">
           (리뷰 125개)
         </Text>
+        <Flex pt="25px" pb="20px">
+          <Text pr="5px"># 올인원</Text>
+          <Text pr="5px"># 올인원</Text>
+          <Text># 올인원</Text>
+        </Flex>
       </Box>
+      <Stack direction="row" spacing="10px" px="17px" pb="30px">
+        <Button
+          variant="primary"
+          colorScheme="primary"
+          size="lg"
+          onClick={goPay}
+        >
+          바로구매
+        </Button>
+        <Button variant="outline" onClick={goCart}>
+          장바구니
+        </Button>
+      </Stack>
     </Box>
   );
 }

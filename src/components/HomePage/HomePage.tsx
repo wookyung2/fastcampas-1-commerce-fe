@@ -2,12 +2,10 @@ import React from 'react';
 
 import { MY_IMAGES } from '@image';
 
-import { Box, BoxProps, Button, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
 
 import Section1 from './_fragments/Section1';
 import Section2 from './_fragments/Section2';
-
-interface HomePageContentProps extends BoxProps {}
 
 const PRODUCT = [
   { image: '/images/main/cosmetic.png', text: '바스&샴푸' },
@@ -15,7 +13,7 @@ const PRODUCT = [
   { image: '/images/main/cosmetic.png', text: '파우더로션' },
 ];
 
-function HomePageContent({ ...basisProps }: HomePageContentProps) {
+function HomePageContent() {
   return (
     <>
       <Flex mx="16px" flexDir="column">
@@ -43,16 +41,10 @@ function HomePageContent({ ...basisProps }: HomePageContentProps) {
             <Text textStyle="text">
               성분 100% 만을 사용한 건강한 화장품입니다.
             </Text>
-            <Button
-              mt="30px"
-              bg="primary.500"
-              color="white"
-              w="190px"
-              borderRadius="25px"
-            >
+            <Button variant="primary" mt="30px" colorScheme="primary" w="190px">
               상품전체보기
             </Button>
-            {PRODUCT.map((item, i) => (
+            {PRODUCT.map((item) => (
               <>
                 <Image key={item.image} src={item.image} mt="80px" />
                 <Text key={item.text} textStyle="title" mt="10px">

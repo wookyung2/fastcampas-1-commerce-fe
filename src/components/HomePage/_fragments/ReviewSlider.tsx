@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-import { Box, Flex, HStack, Stack, Text } from '@chakra-ui/react';
+import { Box, Flex, HStack, Text } from '@chakra-ui/react';
 
 const REVIEW = [
   {
@@ -67,12 +67,13 @@ export default function ReviewSlider() {
         {REVIEW.map((item, i) => (
           <>
             <Box
+              key={i}
               px="20px"
               boxShadow="0px 0px 10px rgba(26, 26, 26, 0.1)"
               borderRadius="20px"
             >
               <Flex justifyContent="space-between" pt="26px">
-                <Box key={i}>
+                <Box>
                   <Text textStyle="titleSmall">{item.writer}</Text>
                   <Text textStyle="textSmall" color="gray.700">
                     {item.date}

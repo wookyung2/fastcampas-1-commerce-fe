@@ -161,6 +161,7 @@ const variantSolid: StyleObjectOrFn = ({ colorScheme: c }) => {
     bg: background,
     color: color,
     borderWidth: 1,
+
     borderColor: borderColor,
     _disabled: buttonDisabled,
     _hover: {
@@ -176,6 +177,7 @@ export const Button: ComponentSingleStyleConfig = {
   baseStyle: {
     w: 'fit-content',
     h: 'fit-content',
+    borderRadius: '25px',
     _focus: { boxShadow: 'none' },
   },
   defaultProps: {
