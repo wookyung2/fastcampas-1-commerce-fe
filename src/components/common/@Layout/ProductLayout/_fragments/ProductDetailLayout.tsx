@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Container, ContainerProps } from '@chakra-ui/react';
 
-import HomeFooter from '../HomeLayout/_fragments/HomeFooter';
-import HomeHeader from '../HomeLayout/_fragments/HomeHeader';
+import HomeFooter from '../../HomeLayout/_fragments/HomeFooter';
+import HomeHeader from '../../HomeLayout/_fragments/HomeHeader';
 
 interface ProductLayoutProps {
   header?: JSX.Element;
@@ -12,7 +12,7 @@ interface ProductLayoutProps {
   containerProps?: ContainerProps;
 }
 
-const ProductLayout = ({
+const ProductDetailLayout = ({
   //
   header = <HomeHeader />,
   footer = <HomeFooter />,
@@ -22,10 +22,12 @@ const ProductLayout = ({
   return (
     <>
       {header}
-      <Container {...containerProps}>{content}</Container>
+      <Container {...containerProps} px="-16px">
+        {content}
+      </Container>
       {footer}
     </>
   );
 };
 
-export default ProductLayout;
+export default ProductDetailLayout;

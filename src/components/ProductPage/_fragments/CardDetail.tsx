@@ -24,10 +24,10 @@ const CardDetail = ({ goPay, goCart }: any) => {
         ></Box>
         <Box pl="30px" pr="30px" pt="45px">
           <Text as="span" textStyle="titleLarge" pr="5px">
-            바스&샴푸
+            인코스런 로션
           </Text>
           <Text as="span" textStyle="textLarge" color="gray.700">
-            300ml
+            120ml
           </Text>
           <Box pt="14px">
             <Text as="span" textStyle="titleLarge" color="primary.500">

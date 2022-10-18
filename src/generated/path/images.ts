@@ -39,6 +39,9 @@ export const MY_IMAGES = {
     card: {
       CARD: { src: '/images/card/card.png', alt: 'card' },
     },
+    product: {
+      LOTION: { src: '/images/product/lotion.png', alt: 'lotion' },
+    },
   },
   VERCEL: { src: '/vercel.svg', alt: 'vercel' },
 };

@@ -108,10 +108,10 @@ const variantGrayOutline: StyleObjectOrFn = ({ colorScheme: c }) => {
 const variantOutline: StyleObjectOrFn = ({ colorScheme: c }) => {
   const {
     bg = 'white',
-    color = 'primary.500',
+    color = `${c}.500`,
     hoverBg = 'white',
     activeBg = 'white',
-    border = 'primary.500',
+    border = `${c}.500`,
   } = accessibleColorMap[c] ?? {};
 
   const background = bg;
@@ -125,10 +125,11 @@ const variantOutline: StyleObjectOrFn = ({ colorScheme: c }) => {
     _disabled: buttonDisabled,
     _hover: {
       bg: hoverBg,
-      borderColor: 'primary.300',
+      color: `${c}.400`,
+      borderColor: `${c}.400`,
       _disabled: buttonDisabled,
     },
-    _active: { bg: activeBg, borderColor: 'primary.300' },
+    _active: { bg: activeBg, borderColor: `${c}.300` },
   };
 };
 
