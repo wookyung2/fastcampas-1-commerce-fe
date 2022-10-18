@@ -8,11 +8,21 @@ const CardDetail = ({ goPay, goCart }: any) => {
   return (
     <>
       <Box
+        pos="relative"
         borderRadius="20px 20px 0px 0px"
-        w="343px"
-        boxShadow="0px 0px 10px  rgba(26, 26, 26, 0.1)"
+        maxW="375px"
+        boxShadow="0px -3px 10px   rgba(26, 26, 26, 0.1)"
       >
-        <Box pl="30px" pt="45px">
+        <Box
+          pos="absolute"
+          w="50px"
+          h="5px"
+          borderRadius="2.5px"
+          bg="gray.200"
+          top="10px"
+          left="150px"
+        ></Box>
+        <Box pl="30px" pr="30px" pt="45px">
           <Text as="span" textStyle="titleLarge" pr="5px">
             바스&샴푸
           </Text>
